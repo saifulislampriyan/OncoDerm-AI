@@ -13,12 +13,12 @@ The project implements a complete pipeline from **data preprocessing → model t
 
 ##  Key Features
 
-- 🔍 Multi-class Skin Lesion Classification (9 classes)  
-- 🧠 Transfer Learning with VGG16 (ImageNet pretrained)  
-- ⚙️ Data Augmentation for Robust Training  
-- 📊 Model Evaluation (Confusion Matrix + Classification Report)  
-- 🌐 Streamlit Web App for Real-Time Prediction  
-- 🧪 Modular and Reproducible Pipeline  
+-  Multi-class Skin Lesion Classification (9 classes)  
+-  Transfer Learning with VGG16 (ImageNet pretrained)  
+-  Data Augmentation for Robust Training  
+-  Model Evaluation (Confusion Matrix + Classification Report)  
+-  Streamlit Web App for Real-Time Prediction  
+-  Modular and Reproducible Pipeline  
 
 ---
 
