@@ -1,45 +1,76 @@
-# skin-cancer-detection
-this repo contains code for skin cancer detection.
+#  DermaVision-X: AI-Powered Skin Cancer Classification
 
-## Installation
-Create a virtual environment from pycharm editor. After activating the virtual environment run the following command.
-```commandline
+> End-to-end deep learning system for multi-class skin cancer detection using VGG16, featuring training, evaluation, and real-time deployment via Streamlit.
+
+---
+
+##  Overview
+
+DermaVision-X is a deep learning–based dermatological diagnosis system designed to classify skin lesions into multiple cancer categories using medical image analysis.  
+The project implements a complete pipeline from **data preprocessing → model training → evaluation → deployment**, enabling real-time predictions through an interactive web interface.
+
+---
+
+##  Key Features
+
+- 🔍 Multi-class Skin Lesion Classification (9 classes)  
+- 🧠 Transfer Learning with VGG16 (ImageNet pretrained)  
+- ⚙️ Data Augmentation for Robust Training  
+- 📊 Model Evaluation (Confusion Matrix + Classification Report)  
+- 🌐 Streamlit Web App for Real-Time Prediction  
+- 🧪 Modular and Reproducible Pipeline  
+
+---
+
+##  Project Structure
+
+
+---
+
+##  Model Architecture
+
+- Base Model: VGG16 (pretrained on ImageNet)  
+- Custom Layers:
+  - Flatten  
+  - Dense (256, ReLU)  
+  - Dropout (0.5)  
+  - Softmax Output Layer  
+
+---
+
+##  Dataset Classes
+
+- Actinic Keratosis  
+- Basal Cell Carcinoma  
+- Dermatofibroma  
+- Melanoma  
+- Nevus  
+- Pigmented Benign Keratosis  
+- Seborrheic Keratosis  
+- Squamous Cell Carcinoma  
+- Vascular Lesion  
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/saifulislampriyan/DermaVision-X.git
+cd DermaVision-X
+
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
 pip install -r requirements.txt
-```
 
-## Train the model
-Run model_train.py to train the model. 
 
-Change batch_size in line 29, and epochs in line 60 to resolve overfitting or underfitting.
+python model_train.py
 
-Comment out either one of these line to save the model in .h5 or .keras model
-```python
-# Save the trained model
-#model.save('cancer_detection_model.h5')  ## run this line if saving model in .keras is giving any error
-#model.save('cancer_detection_model.keras')  ## run this to save model in .keras format
-```
 
-## Evaluate the model
-Run model_eval.py to evaluate the model on test dataset.
+python model_eval.py
 
-Based on saved model format, either comment out line with .h5 or .keras model.
-```python
-# Load the trained model
-#model = load_model('cancer_detection_model.h5')  ## use this if model is saved in .h5
-#model = load_model('cancer_detection_model.keras')  ## use this if model is saved in .keras format
-```
 
-## Run the app
-Run the streamlit app to upload an image to classify cancer.
-
-To do so, first uncomment either one of these lines to load the saved model.
-```python
-# Load the trained model
-#model = load_model('cancer_detection_model.h5')  ## use this if model is saved in .h5
-#model = load_model('cancer_detection_model.keras')  ## use this if model is saved in .keras format
-```
-
-Then run this command. Web app will pop up on browser.
-```commandline
 streamlit run app.py
-```
+
+
