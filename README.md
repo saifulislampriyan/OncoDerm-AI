@@ -52,14 +52,3 @@ The project implements a complete pipeline from **data preprocessing → model t
 
 ---
 
-## ⚙️ Installation
-
-git clone https://github.com/saifulislampriyan/OncoDerm-AI.git
-cd OncoDerm-AI
-
-python model_eval.py
-
-
-streamlit run app.py
-
-
