@@ -54,19 +54,8 @@ The project implements a complete pipeline from **data preprocessing → model t
 
 ## ⚙️ Installation
 
-```bash
-git clone https://github.com/saifulislampriyan/DermaVision-X.git
-cd DermaVision-X
-
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-
-pip install -r requirements.txt
-
-
-python model_train.py
-
+git clone https://github.com/saifulislampriyan/OncoDerm-AI.git
+cd OncoDerm-AI
 
 python model_eval.py
 
